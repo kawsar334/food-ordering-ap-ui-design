@@ -1,0 +1,19 @@
+
+@import "../../global.scss";
+.products{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    gap: 10px  !important;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    @include mobile{
+        width: 80%;
+        height: max-content;
+
+    }
+    
+
+}

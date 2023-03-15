@@ -1,0 +1,110 @@
+
+@import "../../global.scss";
+
+.slider{
+    width: 100vw !important;
+    height: calc(100vh - 90px) !important;
+    background-color: $mainColor;
+    @include mobile {
+        height: 300px !important;
+        background-color: red;
+            
+        }
+    .sliderWrapper{
+        width: 100%;
+        height: 100%;
+        background-color: $mainColor;
+        @include mobile {
+            }
+        .slide{
+            
+            width: 80vw;
+            margin: 0 auto;
+            height: 90% !important;
+           
+            
+            .sliderItem {
+                    height:calc(100vh - 90px) ;
+                    height: 100%;
+                    display: flex !important;
+                    justify-content: space-around !important;
+                    align-items: center !important;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    @include mobile{
+                        gap: 0px;
+                    }
+                    .slideContent{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        h1{
+                            font-size: 40px;
+                            color: $crimson;
+                            cursor: pointer;
+                            font-weight: 500;
+                            border-bottom: 1px solid $border;
+                            @include mobile{
+                                font-size: 20px;
+                            }
+                        }
+                        a{
+                            border: 1px solid $border;
+                            padding: 5px 10px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            color: $white;
+                            transition: all 1s ease;
+                            @include mobile {
+                                    padding: 5px;
+                                }
+                            &:hover{
+                                background-color: $rgb;
+                                // color: $mainColor;
+                                
+                            }
+                        }
+                        p{
+                            color: $border;
+                            font-size: 20px;
+                            width: max-content;
+                            padding: 5px ;
+                            cursor: pointer;
+                            @include mobile {
+                                    font-size: 14px;
+                                    display: none;
+                                }
+                            &:hover{
+                                background-color: $rgb;
+                                border-radius: 5px;
+                                
+                                
+                            }
+                        }
+                        span{
+                        color: $white;
+                        @include mobile{
+                            display: none;
+                        }
+                        
+                        }
+                    }
+                    img {
+                        width: 500px;
+                        height: 500px;
+                        padding: 20px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        @include mobile{
+                            width: 200px !important;
+                            height:200px !important;
+                            // border-radius: 0px;
+                        }
+                    }
+                }
+
+        }
+       
+        
+   }
+}

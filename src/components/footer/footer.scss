@@ -1,0 +1,58 @@
+
+@import "../../global.scss";
+
+.footer{
+    background-color: #2f2929;
+    height: 60vh;
+    color: $white;
+    @include mobile{
+        height: max-content;
+    }
+    .footerWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        height: 100%;
+        @include mobile{
+            flex-direction: column-reverse;
+        }
+        .footerLeft{
+            flex: 1;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+
+            }
+        }
+        .footerMiddle{
+            flex: 0.7;
+                h2{
+                    color: $rgb;
+                    text-transform: uppercase;
+                    text-align: left;
+                    font-size: 20px;
+                }
+        }
+        .footerRight{
+            flex: 2;
+            display: flex;
+            justify-content: space-around;
+
+            .footerMenu{
+                width: 40%;
+                .footerHeader{
+                    color: $mainColor;
+                    margin: 10px 10px ;
+                }
+                p{
+                    margin: 10px 0px;
+                    padding: 10px ;
+                }
+
+            }
+        }
+    }
+}

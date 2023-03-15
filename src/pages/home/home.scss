@@ -1,0 +1,29 @@
+
+
+
+@import  "../../global.scss";
+.home{
+    width: 100vw;
+
+    .productsContainer{
+        width: 100%;
+        height: max-content;
+        background-color: $white;
+        text-align: center;
+        margin: 20px 0px;
+
+        h1{
+            font-size: 25px;
+            margin: 5px auto;
+            text-transform: capitalize;
+
+        }
+        p{
+            width: 50%;
+            height: max-content;
+            text-align: justify;
+            margin: 0 auto;
+            color:$gray;
+        }
+    }
+}

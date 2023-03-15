@@ -1,0 +1,212 @@
+
+
+@import  "../../global.scss";
+
+
+.navcontainer{
+  
+    &.active{
+        .fa-bars,
+            .fa-xmark{
+                height: max-content;
+                color: $mainColor;
+                background-color: $white;
+
+            }
+    }
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    position: sticky;
+    top:0;
+    left: 0;
+    z-index: 999;
+    background-color: $mainColor !important;
+    &.activeBar{
+        background-color: white;
+    }
+    @include mobile{
+        justify-content: flex-end;
+    }
+
+    
+    .navbar{
+     background-color: $mainColor;
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    &.active{
+        background-color: $white;
+        .navwrapper{
+            background-color: $white;
+            color: $mainColor;
+        }
+    }
+    @include mobile{
+        flex-direction: column;
+        height: max-content;
+       
+        
+    }
+    .navwrapper{
+        width: 90%;
+        height:100%;
+        background-color: $mainColor;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: max-content;
+        @include mobile {
+                flex-direction: column;
+                gap: 20px !important;
+                align-items: flex-start;
+            }
+        .navleft{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include mobile{
+                width: 80%;
+                justify-content: flex-start;
+            }
+           
+            .navIcon{
+                font-size: 30px;
+                color: $white;
+                cursor: pointer;
+            }
+            .logocontainer{
+                display: flex;
+                flex-direction: column;
+                p{
+                    font-weight: 700;
+                    font-size: 30px;
+                    cursor: pointer;
+                }
+                span{
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .navmiddle{
+            @include mobile {
+                    width: 80%;
+                   
+                }
+            ul{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 10px;
+                list-style: none;
+                @include mobile {
+                    flex-direction: column;
+                        width: 100%;
+                        align-items: flex-start;
+                    }
+              
+                li{
+                    transition: all 1s ease;
+                    @include mobile {
+                            width: 90%;
+                            justify-content: flex-start;
+                            padding: 5px  ;
+                            border-radius: 20px;
+
+                            &:hover{
+                                background-color: $rgb;
+                            }
+                           
+                        }
+                    a{
+                        padding: 5px 10px;
+                        border-radius: 25px;
+                        transition: all 1s ease;
+                       
+                        
+                        &:hover{
+
+                            background-color: $rgb;
+                            @include mobile {
+                            
+                                    background-color: transparent;
+                            
+                                }
+                            
+                        }
+
+                    }
+                    .logo{
+                        font-size: 30px;
+                        font-family: 'Dancing Script', cursive;
+                        font-weight: 700;
+                        @include mobile{
+                                font-size: 40px;
+                                color:crimson;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        
+        .navright{
+            .rightBase{
+                position: relative;
+                i{
+                    font-size: 25px;
+                    cursor: pointer;
+
+
+                }
+                span{
+                    position: absolute;
+                    bottom: 10px;
+                    left: 15px;
+                    color: white;
+                    background-color: crimson;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+            }
+        }
+
+    }
+}
+
+.fa-bars, .fa-xmark{
+    font-size: 20px !important;
+    background-color: inherit;
+    padding: 10px;
+    display: none;
+    background-color: $mainColor;
+    margin: 15px 30px;
+    
+    @include mobile{
+        display: block;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 10px;
+        color: $white;
+    }
+}
+
+ }
