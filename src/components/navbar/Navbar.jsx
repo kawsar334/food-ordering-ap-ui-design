@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react"
+import { useSelector } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
 import "./navbar.scss"
 
 const Navbar = () => {
+    const cart = useSelector((state) => state.cart);
         const [scrolled, setScrolled] = useState(false);
         const [open, setOpen] = useState(true);
+        const location = useLocation().pathname
 
+        console.log(location)
         const isActive = ()=>{
             window.scrollY > 0 ? setScrolled(true): setScrolled(false);
         }   
@@ -21,31 +26,29 @@ const Navbar = () => {
     {      
               open && <div className={scrolled ?"active navbar" :"navbar"}>
         <div className="navwrapper">
-            <div className="navleft">
+            <Link to="/" className="navleft">
                   <div className="navIcon"><i className="fa-solid fa-phone"></i></div>
                   <div className="logocontainer"><p>Order Now</p>
                   <span>+12343455</span>
                   </div>
-            </div>
+            </Link>
             <div className="navmiddle">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                      <li><a href="#products">Products</a></li>
-                      <li><a href="#">Menu</a></li>
-                      <li><a href="#" className="logo">Kawsar firoz</a></li>
-                      <li><a href="#">Events</a></li>
-                      <li><a href="#">Blog</a></li>
-                      <li><a href="#">Contact</a></li>
-                      
-
+                    <li><Link to="/">Home</Link></li>
+                    {location  ==="/" &&<li><a href="#products">Products</a></li>}
+                    <li><Link to="#">Menu</Link></li>
+                    {location === "/" &&<li><Link to="/" className="logo">Kawsar firoz</Link></li>}
+                      <li><Link to="#">Events</Link></li>
+                      <li><Link to="#">Blog</Link></li>
+                      <li><Link to="#">Contact</Link></li>
                 </ul>
             </div>
             <div className="navright">
-                  <div className="rightBase">
+                  <Link to="/cart" className="rightBase">
                   <i className="fa-solid fa-cart-shopping"></i>
-                  <span>0</span>
+                  <span>{cart.totalQuantity}</span>
 
-                  </div>
+                  </Link>
             </div>
         </div>
     </div>}

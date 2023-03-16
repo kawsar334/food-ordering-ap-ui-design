@@ -5,6 +5,7 @@ export const porducts = [
         price: 21,
         desc: " essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,.",
         img: "/imgs/p1.png",
+        quantity:1,
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ export const porducts = [
         price: 15,
         desc: " essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,.",
         img: "/imgs/p2.png",
+        quantity: 1,
     },
     {
         id: 3,
@@ -19,6 +21,7 @@ export const porducts = [
         price: 10,
         desc: " essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,.",
         img: "/imgs/p3.png",
+        quantity: 1,
     },
     {
         id: 4,
@@ -26,6 +29,7 @@ export const porducts = [
         price: 21,
         desc: " essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,.",
         img: "/imgs/p1.png",
+        quantity: 1,
     },
     {
         id: 5,
@@ -33,6 +37,7 @@ export const porducts = [
         price: 21,
         desc: " essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,.",
         img: "/imgs/p4.png",
+        quantity: 1,
     },
     {
         id: 6,
@@ -40,6 +45,7 @@ export const porducts = [
         price: 21,
         desc: " essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,.",
         img: "/imgs/p1.png",
+        quantity: 1,
     },
     {
         id: 7,
@@ -47,6 +53,7 @@ export const porducts = [
         price: 10,
         desc: " essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,.",
         img: "/imgs/p3.png",
+        quantity: 1,
     },
     {
         id: 8,
@@ -54,6 +61,7 @@ export const porducts = [
         price: 21,
         desc: " essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,.",
         img: "/imgs/p1.png",
+        quantity: 1,
     },
 
 ]

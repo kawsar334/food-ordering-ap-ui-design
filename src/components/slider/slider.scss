@@ -33,6 +33,7 @@
                     flex-wrap: wrap;
                     @include mobile{
                         gap: 0px;
+                        flex-direction: column-reverse;
                     }
                     .slideContent{
                         display: flex;
@@ -44,6 +45,7 @@
                             cursor: pointer;
                             font-weight: 500;
                             border-bottom: 1px solid $border;
+                            text-transform: uppercase;
                             @include mobile{
                                 font-size: 20px;
                             }

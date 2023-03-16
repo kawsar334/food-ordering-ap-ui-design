@@ -1,6 +1,8 @@
 import "./slider.scss";
 import React, { useRef, useState } from "react";
 import Slider from 'infinite-react-carousel';
+import { porducts } from "../../data";
+import { Link } from "react-router-dom";
 
 
 
@@ -9,33 +11,18 @@ export default function Slide() {
         <div className="slider" >
            <div className="sliderWrapper">
                 <Slider className="slide" arrowsScroll={1} autoplaySpeed={3000} autoplay={true} slidesToShow={1} centerMode={true}>
-                    <div className="sliderItem">
+                    {porducts.map((item)=>(
+
+                    <div  className="sliderItem">
                         <div className="slideContent">
-                            <h1>Pizza</h1>
+                                <h1>{item.title}</h1>
                             <p>50% OFF</p>
-                            <a href="#">Order Now</a>
-                            <span>kawsar</span>
+                                <a href="#products">Order Now</a>
                         </div>
-                        <img src="/imgs/p1.png" alt="" />
+                        <img src={item.img} alt="" />
                     </div>
-                    <div className="sliderItem">
-                        <div className="slideContent">
-                            <h1>Pizza</h1>
-                            <p>50% OFF</p>
-                            <a href="#">Order Now</a>
-                            <span>kawsar</span>
-                        </div>
-                        <img src="/imgs/p3.png" alt="" />
-                    </div>
-                    <div className="sliderItem">
-                        <div className="slideContent">
-                            <h1>Pizza</h1>
-                            <p>50% OFF</p>
-                            <a href="#">Order Now</a>
-                            <span>kawsar</span>
-                        </div>
-                        <img src="/imgs/p4.png" alt="" />
-                    </div>
+                    ))}
+                    
                 </Slider> 
            </div>
         </div>

@@ -1,0 +1,111 @@
+
+
+@import "../../global.scss";
+
+.details{
+    width: 100%;
+
+    .detailsWrapper{
+        width: 80%;
+        height:max-content;
+        background-color: $white;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        @include mobile{
+            flex-direction: column;
+        }
+        
+        .left{
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 400px;
+                height: 400px;
+                object-fit: cover;
+               
+            }
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 400px;
+            padding: 10px;
+            gap: 10px;
+            .title{
+                font-size: 25px;
+                color: $crimson;
+                text-transform: uppercase;
+            }
+            .price{
+                color: $mainColor;
+                font-weight: 500;
+            }
+            .desc{
+                color: $gray;
+                font-size: 14px;
+                text-align: left;
+                line-height: 20px;
+            }
+            .categories{
+                display: flex;
+                gap: 20px;
+                .small, .medium, .large{
+                    display: flex;
+                    gap: 5px;
+                    span{
+                        color: $mainColor;
+                    }
+                    input{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .counter{
+                display: flex;
+                gap: 10px;
+
+                span{
+                    border: 1px solid $mainColor;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 20px;
+                    cursor: pointer;
+                    border-radius: 3px;
+                    transition: all 1s ease;
+                    &:hover{
+                        background-color: $mainColor;
+                        color:$white;
+
+                    }
+                }
+                button{
+                    border: 1px solid $crimson;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    color: $crimson;
+                    transition: all 1s ease;
+                    &:hover{
+                        background-color: $mainColor;
+                        color: $white;
+                        border-radius: 5px;
+                        border: 1px solid $mainColor;
+
+                        
+                    }
+
+
+                }
+            }
+
+        }
+    }
+
+}
